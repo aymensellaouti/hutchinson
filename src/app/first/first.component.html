@@ -1,0 +1,9 @@
+<p>first works!</p>
+<p>Bonjour {{name}}</p>
+
+<input type="text"
+       #clickInput
+       (change)="changNbClick(clickInput.value)">
+<div (click)="incrementNbClick()">
+  {{nombreClick}}
+</div>
