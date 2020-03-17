@@ -7,12 +7,13 @@ import { FirstComponent } from './first/first.component';
 import { ColorComponent } from './color/color.component';
 import { TwoWayComponent } from './two-way/two-way.component';
 import {FormsModule} from '@angular/forms';
-import { CardComponent } from './card/card.component';
 import { FilsComponent } from './fils/fils.component';
 import { PereComponent } from './pere/pere.component';
 import { CvComponent } from './cv/cv/cv.component';
 import { ListComponent } from './cv/list/list.component';
 import { ItemComponent } from './cv/item/item.component';
+import { CardComponent } from './cv/card/card.component';
+import { NgstyleComponent } from './directives/ngstyle/ngstyle.component';
 
 @NgModule({
   declarations: [
@@ -20,12 +21,13 @@ import { ItemComponent } from './cv/item/item.component';
     FirstComponent,
     ColorComponent,
     TwoWayComponent,
-    CardComponent,
     FilsComponent,
     PereComponent,
     CvComponent,
     ListComponent,
-    ItemComponent
+    ItemComponent,
+    CardComponent,
+    NgstyleComponent
   ],
   imports: [
     BrowserModule,
