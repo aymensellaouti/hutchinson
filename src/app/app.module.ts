@@ -15,6 +15,12 @@ import { ItemComponent } from './cv/item/item.component';
 import { CardComponent } from './cv/card/card.component';
 import { NgstyleComponent } from './directives/ngstyle/ngstyle.component';
 import { MiniWordComponent } from './directives/mini-word/mini-word.component';
+import { NgclassComponent } from './directives/ngclass/ngclass.component';
+import { HighlightDirective } from './directives/highlight.directive';
+import { RainbowDirective } from './directives/rainbow.directive';
+import { DefaultImagePipe } from './pipes/default-image.pipe';
+import {LoggerService} from './services/logger.service';
+import { TodoComponent } from './todo/todo.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +35,12 @@ import { MiniWordComponent } from './directives/mini-word/mini-word.component';
     ItemComponent,
     CardComponent,
     NgstyleComponent,
-    MiniWordComponent
+    MiniWordComponent,
+    NgclassComponent,
+    HighlightDirective,
+    RainbowDirective,
+    DefaultImagePipe,
+    TodoComponent
   ],
   imports: [
     BrowserModule,
