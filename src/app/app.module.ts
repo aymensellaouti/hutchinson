@@ -21,6 +21,11 @@ import { RainbowDirective } from './directives/rainbow.directive';
 import { DefaultImagePipe } from './pipes/default-image.pipe';
 import {LoggerService} from './services/logger.service';
 import { TodoComponent } from './todo/todo.component';
+import { HeaderComponent } from './header/header.component';
+import { DetailComponent } from './cv/detail/detail.component';
+import { FrontComponent } from './front/front.component';
+import { BackComponent } from './back/back.component';
+import { NFoundComponent } from './nfound/nfound.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +45,12 @@ import { TodoComponent } from './todo/todo.component';
     HighlightDirective,
     RainbowDirective,
     DefaultImagePipe,
-    TodoComponent
+    TodoComponent,
+    HeaderComponent,
+    DetailComponent,
+    FrontComponent,
+    BackComponent,
+    NFoundComponent
   ],
   imports: [
     BrowserModule,
