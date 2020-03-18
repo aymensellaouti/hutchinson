@@ -28,6 +28,10 @@ import { BackComponent } from './back/back.component';
 import { NFoundComponent } from './nfound/nfound.component';
 import { LoginComponent } from './login/login.component';
 import { ObservableComponent } from './observables/observable/observable.component';
+import { HttpComponent } from './https/http/http.component';
+import {HttpClientModule} from '@angular/common/http';
+import { AddPersonneComponent } from './cv/add-personne/add-personne.component';
+import {AuthentificationInterceptorProvider} from './interceptors/HttpInterceptors';
 
 @NgModule({
   declarations: [
@@ -54,14 +58,17 @@ import { ObservableComponent } from './observables/observable/observable.compone
     BackComponent,
     NFoundComponent,
     LoginComponent,
-    ObservableComponent
+    ObservableComponent,
+    HttpComponent,
+    AddPersonneComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [AuthentificationInterceptorProvider],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

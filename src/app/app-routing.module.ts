@@ -9,6 +9,8 @@ import {BackComponent} from './back/back.component';
 import {FirstComponent} from './first/first.component';
 import {NFoundComponent} from './nfound/nfound.component';
 import {LoginComponent} from './login/login.component';
+import {AddPersonneComponent} from './cv/add-personne/add-personne.component';
+import {LoginGuard} from './cv/guards/login.guard';
 
 
 const routes: Routes = [
@@ -16,7 +18,7 @@ const routes: Routes = [
     children: [
       {path: '', redirectTo: 'cv', pathMatch: 'full'},
       {path: 'cv', component: CvComponent},
-      {path: 'cv/add', component: FirstComponent},
+      {path: 'cv/add', component: AddPersonneComponent, canActivate: [LoginGuard]},
       {path: 'cv/:id', component: DetailComponent},
       {path: 'todo', component: TodoComponent},
     ]

@@ -19,12 +19,10 @@ export class DetailComponent implements OnInit {
   ngOnInit() {
     this.activatedRoute.params.subscribe(
       (parametres) => {
-        const personne = this.cvService.getPersonneById(parametres.id);
-        if (personne) {
-          this.personne = personne;
-        } else {
-          this.router.navigate(['cv']);
-        }
+        this.cvService.getPersonneById(parametres.id).subscribe(
+           (personne) => this.personne = personne,
+          (erreur) => this.router.navigate(['cv'])
+        );
       }
     );
     this.activatedRoute.queryParams.subscribe(
@@ -32,4 +30,10 @@ export class DetailComponent implements OnInit {
     );
   }
 
+  deletePersonne(id: number) {
+    this.cvService.deletePersonneById(id).subscribe(
+      (data) => this.router.navigate(['cv']),
+      (erreur) => console.log(erreur)
+    );
+  }
 }
