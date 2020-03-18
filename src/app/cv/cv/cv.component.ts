@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {Personne} from '../model/personne';
 import {LoggerService} from '../../services/logger.service';
 import {TodoService} from '../../services/todo.service';
+import {CvService} from '../services/cv.service';
 
 @Component({
   selector: 'app-cv',
@@ -9,18 +10,23 @@ import {TodoService} from '../../services/todo.service';
   styleUrls: ['./cv.component.css']
 })
 export class CvComponent implements OnInit {
-  selectedPersonne: Personne;
+  // selectedPersonne: Personne;
+  nbSelected = 0;
   constructor(
     private loggerService: LoggerService,
-    private todoService: TodoService
+    private todoService: TodoService,
+    private cvService: CvService
   ) { }
 
   ngOnInit() {
-    this.loggerService.logger('cc je suis le cv Component');
+    this.cvService.selectItemSubject.subscribe(
+      (personne) => this.nbSelected++
+    );
+    // this.loggerService.logger('cc je suis le cv Component');
   }
 
-  getSelectedPersonne(personne: Personne) {
-    this.selectedPersonne = personne;
-    this.todoService.logTodos();
-  }
+  // getSelectedPersonne(personne: Personne) {
+  //   this.selectedPersonne = personne;
+  //   this.todoService.logTodos();
+  // }
 }

@@ -26,6 +26,8 @@ import { DetailComponent } from './cv/detail/detail.component';
 import { FrontComponent } from './front/front.component';
 import { BackComponent } from './back/back.component';
 import { NFoundComponent } from './nfound/nfound.component';
+import { LoginComponent } from './login/login.component';
+import { ObservableComponent } from './observables/observable/observable.component';
 
 @NgModule({
   declarations: [
@@ -50,7 +52,9 @@ import { NFoundComponent } from './nfound/nfound.component';
     DetailComponent,
     FrontComponent,
     BackComponent,
-    NFoundComponent
+    NFoundComponent,
+    LoginComponent,
+    ObservableComponent
   ],
   imports: [
     BrowserModule,

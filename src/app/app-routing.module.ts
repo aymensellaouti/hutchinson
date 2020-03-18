@@ -8,6 +8,7 @@ import {FrontComponent} from './front/front.component';
 import {BackComponent} from './back/back.component';
 import {FirstComponent} from './first/first.component';
 import {NFoundComponent} from './nfound/nfound.component';
+import {LoginComponent} from './login/login.component';
 
 
 const routes: Routes = [
@@ -25,6 +26,7 @@ const routes: Routes = [
       {path: 'color', component: ColorComponent}
     ]
   },
+  {path: 'login', component: LoginComponent},
   {path: '**', component: NFoundComponent}
 ];
 

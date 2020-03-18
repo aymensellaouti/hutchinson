@@ -1,10 +1,13 @@
 <div class="row">
+  <div class="col-md-6 alert alert-success">
+    Vous avez sélectionné {{nbSelected}} Cv.
+  </div>
+</div>
+<div class="row">
   <div class="col">
-    <app-list (forwardPerson)="getSelectedPersonne($event)"></app-list>
+    <app-list></app-list>
   </div>
   <div class="col">
-    <app-card
-      *ngIf="selectedPersonne"
-      [personne]="selectedPersonne"></app-card>
+    <app-card></app-card>
   </div>
 </div>

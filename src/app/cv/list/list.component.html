@@ -1,7 +1,6 @@
 <ol class="list-group">
   <app-item
     *ngFor="let personneItem of personnes"
-    (selectItem)="forwardPersonne($event)"
     [personne]="personneItem"
   ></app-item>
 </ol>
